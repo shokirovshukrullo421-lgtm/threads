@@ -4,19 +4,15 @@ print("=== Twitter CLI ===")
 
 user_id = None
 while not user_id:
-    print("\n1. Login\n2. Ro‘yxatdan o‘tish")
+    print("\n1. Login\n2. Royxatdan otish")
     choice = input("Tanlov: ")
     if choice == "1":
         user_id = login()
     elif choice == "2":
         register()
-        user_id = login()  # registerdan keyin login qilamiz
+        user_id = login()  
     else:
-        print("❌ Noto‘g‘ri tanlov")
-
-# =========================
-# Main menu
-# =========================
+        print("Notogri tanlov")
 if user_id:
     while True:
         print("\n=== MAIN MENU ===")
@@ -33,9 +29,9 @@ if user_id:
             write_tweet(user_id)
         elif choice == "3":
             profile(user_id)
-            print("👤 Profil funksiyasi hozircha ishlamaydi")
+            print(" Profil funksiyasi hozircha ishlamaydi")
         elif choice == "4":
-            print("❌ Chiqildi")
+            print("Chiqildi")
             break
         else:
-            print("❌ Noto‘g‘ri tanlov")
+            print(" Notogri tanlov")
