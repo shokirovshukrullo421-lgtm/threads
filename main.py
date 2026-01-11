@@ -1,16 +1,20 @@
-from f_yalar import login, register, view_tweets, write_tweet, profile
-
-print("=== Twitter CLI ===")
-
+from funksiyalar.login import login
+from funksiyalar.register import register
+from funksiyalar.view import view_tweets
+from funksiyalar.write import write_tweet
+from funksiyalar.profil import profile
 user_id = None
 while not user_id:
-    print("\n1. Login\n2. Royxatdan otish")
+    print("\n1. Login\n2. Royxatdan otish\n3.chiqish")
     choice = input("Tanlov: ")
     if choice == "1":
         user_id = login()
     elif choice == "2":
         register()
-        user_id = login()  
+        user_id = login() 
+    elif choice == "3":
+        print("Chiqildi")
+        break 
     else:
         print("Notogri tanlov")
 if user_id:

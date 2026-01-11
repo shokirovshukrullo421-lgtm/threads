@@ -1,18 +1,15 @@
-from ulash import ulash
-
+from startup.ulash import ulash
 def login():
     conn = ulash("asd", "admin1112")  
     cursor = conn.cursor()
 
     username = input("Login: ")
     password = input("Parol: ")
-
     cursor.execute(
         "SELECT id FROM users WHERE username=%s AND password_hash=%s",
         (username, password)
     )
     user = cursor.fetchone()
-
     cursor.close()
     conn.close()
 
@@ -22,8 +19,6 @@ def login():
     else:
         print(" Login yoki parol notogri.")
         return None
-
-
 def register():
     conn = ulash("asd", "admin1112")
     cursor = conn.cursor()
