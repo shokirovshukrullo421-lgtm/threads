@@ -5,7 +5,7 @@ import random
 def masala1():
     time.sleep(1) 
     print("Joriy thread:", threading.current_thread().name)
-t1 = threading.Thread(target=masala1, name="Thread-1")
+t1 = threading.Thread(target=masala1, name="thread")
 t1.start()
 ##2-masala
 
