@@ -38,17 +38,5 @@ for i in range(5):
     t.start()
 for t in threads:
     t.join()
-##4-masala
 
-results = [] 
-def task_9(number):
-    kvadrat = number ** 2
-    results.append(kvadrat) 
-threads = []
-sonlar = [1, 2, 3, 4, 5]
-for i in range(5):
-    t = threading.Thread(target=task_9, args=(sonlar[i],))
-    threads.append(t)
-    t.start()
-
-##5-masalani tuhsunmadim
+##4-5-masalani tuhsunmadim
