@@ -4,7 +4,7 @@ import random
 ##1-masala
 def masala1():
     time.sleep(1) 
-    print("Joriy thread:", threading.current_thread().name)
+    print("joriy thread:", threading.current_thread().name)
 t1 = threading.Thread(target=masala1, name="thread")
 t1.start()
 ##2-masala
@@ -13,14 +13,14 @@ boshlanish = time.time()
 def masala2():
     thread_name = threading.current_thread().name
     print(
-        f"Dastur boshlangan vaqt: {boshlanish} | "
-        f"Thread: {thread_name}"
+        f"dastur boshlangan vaqt: {boshlanish} | "
+        f"thread: {thread_name}"
     )
 
 threads = []
 
 for i in range(4):
-    t = threading.Thread(target=masala2, name=f"Thread-{i+1}")
+    t = threading.Thread(target=masala2, name=f"thread-{i+1}")
     threads.append(t)
     t.start()
 
@@ -33,7 +33,7 @@ def masala3():
     print(f"{threading.current_thread().name} | {sec} sekund kutdi")
 threads = []
 for i in range(5):
-    t = threading.Thread(target=masala3, name=f"Thread-{i+1}")
+    t = threading.Thread(target=masala3, name=f"thread-{i+1}")
     threads.append(t)
     t.start()
 for t in threads:
