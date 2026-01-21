@@ -1,1 +1,0 @@
-from user_function.user_panel import user_panel
