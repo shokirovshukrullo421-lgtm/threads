@@ -1,0 +1,61 @@
+2026-01-23 16:35:56,357 | INFO | Dastur ishga tushdi
+2026-01-23 16:36:01,130 | INFO | Register menyusi tanlandi
+2026-01-23 16:36:04,542 | INFO | Register urinish | username=a
+2026-01-23 16:36:04,565 | WARNING | Register rad etildi | username band: a
+2026-01-23 16:36:04,569 | INFO | Database ulanish yopildi (register)
+2026-01-23 16:36:09,057 | INFO | Login menyusi tanlandi
+2026-01-23 16:36:11,686 | INFO | Login urinish | username=a
+2026-01-23 16:36:11,691 | INFO | Login muvaffaqiyatli | user_id=1 | role=user
+2026-01-23 16:36:11,694 | INFO | Database ulanish yopildi (login)
+2026-01-23 16:36:11,694 | INFO | User panelga kirdi | user_id=1
+2026-01-23 16:36:59,154 | INFO | Login menyusi tanlandi
+2026-01-23 16:37:06,326 | INFO | Login urinish | username=admin
+2026-01-23 16:37:06,330 | INFO | Login muvaffaqiyatli | user_id=2 | role=admin
+2026-01-23 16:37:06,333 | INFO | Database ulanish yopildi (login)
+2026-01-23 16:37:06,333 | INFO | Admin panelga kirdi | user_id=2
+2026-01-23 16:40:29,742 | INFO | Dastur ishga tushdi
+2026-01-23 16:40:31,769 | INFO | Login menyusi tanlandi
+2026-01-23 16:40:39,153 | INFO | Login urinish | username=admin
+2026-01-23 16:40:39,158 | INFO | Login muvaffaqiyatli | user_id=2 | role=admin
+2026-01-23 16:40:39,161 | INFO | Database ulanish yopildi (login)
+2026-01-23 16:40:39,162 | INFO | Admin panelga kirdi | user_id=2
+2026-01-23 16:41:14,619 | INFO | Database ga ulanildi
+2026-01-23 16:41:14,636 | ERROR | Mashina qoshishda xatolik yuz berdi
+Traceback (most recent call last):
+  File "c:\Users\Lenovo__\Desktop\psql2\rent car\admin_function\addd_cars.py", line 20, in add_new_car
+    await conn.execute(
+    ...<6 lines>...
+    )
+  File "C:\Users\Lenovo__\AppData\Local\Programs\Python\Python313\Lib\site-packages\asyncpg\connection.py", line 357, in execute
+    _, status, _ = await self._execute(
+                   ^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\Lenovo__\AppData\Local\Programs\Python\Python313\Lib\site-packages\asyncpg\connection.py", line 1873, in _execute
+    result, _ = await self.__execute(
+                ^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\Lenovo__\AppData\Local\Programs\Python\Python313\Lib\site-packages\asyncpg\connection.py", line 1970, in __execute
+    result, stmt = await self._do_execute(
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\Lenovo__\AppData\Local\Programs\Python\Python313\Lib\site-packages\asyncpg\connection.py", line 2013, in _do_execute
+    stmt = await self._get_statement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\Lenovo__\AppData\Local\Programs\Python\Python313\Lib\site-packages\asyncpg\connection.py", line 443, in _get_statement
+    statement = await self._protocol.prepare(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "asyncpg/protocol/protocol.pyx", line 165, in prepare
+asyncpg.exceptions.UndefinedColumnError: столбец "status" в таблице "cars" не существует
+2026-01-23 16:41:14,643 | INFO | Database ulanish yopildi
